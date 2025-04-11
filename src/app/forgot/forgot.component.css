@@ -1,0 +1,56 @@
+#main{
+    height: 350px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: yellow;
+    background-image: linear-gradient(yellow,rgb(248, 248, 99));
+   
+    justify-self: center;
+    margin-top: 150px;
+    padding-left: 100px;
+    align-content: center;
+}
+#label1{
+    font-size: 30px;
+    padding-left: 90px;
+}
+#label2{
+    font-size: 30px;
+    padding-left: 40px;
+}
+input{
+    position: relative;
+    height: 40px;
+    width: 290px;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+}
+#btn1{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 90px;
+    margin-top: 30px;
+    color: yellow;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+#div_eye img{
+    position: absolute;
+    
+    width: 20px;
+    top: 90px;
+    margin-left: 250px; 
+    margin-top:141px;
+}
+#div_eye1 img{
+    position: absolute;
+    
+    width: 20px;
+    top: 90px;
+    margin-left: 250px; 
+    margin-top:240px;
+}

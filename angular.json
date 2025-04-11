@@ -68,7 +68,10 @@
               "buildTarget": "noteapp:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development", 
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -96,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d1fb7c2d-8f42-4801-83ee-8c4829c517e1"
   }
 }

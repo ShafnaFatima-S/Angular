@@ -1,0 +1,38 @@
+<section>
+    <nav>
+        <img src="assets/image/dog.jpg" alt="Profile" id="profile" title="profile">
+       <div id="main_div">
+        <input type="text" id="search" placeholder="Search" >
+        <a href="#"><img src="assets/favicon.ico" id="search_icon" alt="icon"></a>
+        </div>
+    
+    </nav>
+    <hr id="line">
+    <div id="content">
+    <div  id="sidebar">
+        <a href="#" id="side">All Notes</a><br>
+        <a href="#" id="side">Trash</a><br>
+        <a href="#" id="side">Lock</a><br>
+        <a href="#" id="side">Archive</a><br>
+       
+    </div>
+    <div id="vertical"></div>
+    <div id="main">
+        <h3 id="heading">All Notes</h3>
+    </div>
+    <div>
+        <a (click)="note()" >
+            <img src="assets/image/add.png" alt="add" id="add_img">
+        </a>
+    </div> 
+    <div id="outer">
+        <div *ngFor="let data of input" id="note">
+            
+               <p id="title">{{data.title}}</p> <br>
+                <p id="desc"> {{data.description}}</p><br>
+                <p id="created">created: {{data.created}}</p>
+        </div>
+    </div>
+
+</div>
+</section>

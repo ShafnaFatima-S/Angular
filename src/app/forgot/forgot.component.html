@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div id="main">
+    <form [formGroup]="passwordForm" (ngSubmit)="onSubmit()" >
+    <div>
+        <label for="username" id="label1">Password</label><br>
+        <input [type]="password" formControlName="createPassword" name="password" id="create_password"  required >
+        <div id="div_eye">
+            <a (click)="password1()" id="btn">
+                <img src="assets/image/eye.png" id="eye_img" >
+            </a>
+        </div>
+    </div>
+    <div *ngIf="hasError('password', 'required')">
+        <p style="color: red">Password is required</p>
+    </div>
+    <div *ngIf="hasError('password', 'minlength')">
+        <p style="color: red">Password must be at least 6 characters long</p>
+    </div>
+    <div *ngIf="hasError('password', 'maxlength')">
+        <p style="color: red">Password must be less than 15 characters long</p>
+    </div>
+        <br>
+    <div>
+        <label for="password" id="label2">Re-Enter Password</label><br>
+        <input [type]="password"  name="password"  formControlName="confirmPassword" id="confirm_password" required>
+        <div id="div_eye1">
+            <a (click)="pass()" id="btn">
+                <img src="assets/image/eye.png" id="eye_img" >
+            </a>
+        </div>
+    </div>
+    <div *ngIf="passwordForm.errors?.['passwordMismatch'] && passwordForm.get('confirmPassword')?.touched">
+        <p style="color: red">Passwords do not match!</p>
+    </div>
+        <br>
+    <br>
+    <div>
+        <button type="submit" id="btn1" >Confirm</button>
+        
+    </div>
+</form>
+</div>

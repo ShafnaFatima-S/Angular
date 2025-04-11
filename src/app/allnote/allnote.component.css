@@ -1,0 +1,124 @@
+
+nav{
+    display: flex;
+}
+#profile{
+    color: yellow;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+#content{
+    display: flex;
+}
+#search{
+    font-size: 17px;
+    background-color: rgb(226, 207, 207);
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(226, 207, 207);
+    margin-top: 20px;
+    margin-left: 450px;
+    text-align: center;
+}
+#line{
+    color:rgb(226, 207, 207) ;
+}
+#vertical{
+  margin: 0;
+  border-right:2px solid rgb(226, 207, 207);
+  margin-left: 40px;
+  min-height: 100%;
+  height: auto;
+  
+  
+}
+#side{
+    margin-left: 50px;
+  margin-top: 50px;
+    display: flex;
+    text-decoration: none;
+    height: 40px;
+    width: 90px;
+    border: 1px solid yellow;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    gap: 5px;
+    padding-left: 20px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#main_div{
+    position: relative;
+    
+}
+#main_div img{
+    position: absolute;
+    width: 20px;
+    top: 25px;
+    right: 15px;
+}
+ 
+#main{
+    margin-left: 10px;
+}
+#heading{
+    color: white;
+}
+#add_img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+}
+#outer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#note{
+   background-color: #F2FB7F;
+    height: 200px;
+    width: 300px;
+    margin-left:100px ;
+    border: 1px solid #F2FB7F ;
+    margin-top: 50px;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   border-radius: 20px;
+}
+#title{
+    font-size: 28px;
+    /* margin: 0; */
+    /* padding: 0; */
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+    line-height: 1px;
+}
+#desc{
+    /* line-height: 1px; */
+    font-size: 20px;
+    margin: 0px;
+    /* padding: 0px; */
+    text-align: left;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+    
+}
+#created{
+    font-size: 15px;
+    text-align: left;
+    line-height: 1px;
+    padding-left: 10px;
+}
