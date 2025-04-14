@@ -10,7 +10,7 @@
     <div>
         <div id="main_div">
            <form [formGroup]="dataForm" (ngSubmit)="details()">
-            <button id="save" type="submit" >Save</button>
+            <button id="save" type="button" >Save</button>
             <input type="text" placeholder="Title..." id="title"formControlName="title"><br>
             <input type="text" placeholder="Category...." id="cat" formControlName="cat"><br>
             <textarea placeholder="Description..." id="desc" formControlName="description"></textarea>

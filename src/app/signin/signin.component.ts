@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import axios from 'axios';
-import { error } from 'console';
+import { token } from '../app.component';
 
 @Component({
   selector: 'app-signin',
@@ -16,7 +16,7 @@ import { error } from 'console';
 
 export class SigninComponent {
   loginForm: FormGroup;
-constructor(private router:Router,public formBuilder:FormBuilder){
+constructor(private router:Router,public formBuilder:FormBuilder,){
   this.loginForm =this.formBuilder.group({
     username:['',Validators.required],
     password:['',Validators.required],
@@ -25,16 +25,23 @@ constructor(private router:Router,public formBuilder:FormBuilder){
   
 )
 }
-  token:any=[]
+  // token:any=[]
 
-log() {
-  if (this.loginForm.valid) {
+  log(){
+    if (this.loginForm.valid) {
       alert(`Form Submitted Successfully`);
-  } else {
+      
+    } else {
       alert('Please check the form for errors');
+    }
   }
+  
+hasError(controlName: string, errorName: string) {
+  return (
+      this.loginForm.get(controlName)?.hasError(errorName) &&
+      this.loginForm.get(controlName)?.hasError(errorName)
+  );
 }
-
 async allNote(){
 
     const username=this.loginForm.get('username')?.value;
@@ -46,11 +53,19 @@ async allNote(){
       const  data=response.data
       if(data.status=="ERROR"){
         alert("Invalid username and password!")
+        
       }
-      this.token.push(data.data)
+      token.push(data.token); 
+        // this.token.push(data.token)
+        console.log("token------>",data.token)
+        console.log("token------>>>",token)
+
         this.router.navigate(['/allnote'])
       
 }
+
+
+
 
 forgot(){
   this.router.navigate(['/forgot'])
