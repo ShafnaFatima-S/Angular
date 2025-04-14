@@ -3,7 +3,7 @@
         <img src="assets/image/dog.jpg" alt="Profile" id="profile" title="profile">
        <div id="main_div">
         <input type="text" id="search" placeholder="Search" >
-        <a href="#"><img src="assets/favicon.ico" id="search_icon" alt="icon"></a>
+        <a ><img src="assets/favicon.ico" id="search_icon" alt="icon"></a>
         </div>
     
     </nav>
@@ -26,13 +26,16 @@
         </a>
     </div> 
     <div id="outer">
-        <div *ngFor="let data of input" id="note">
+        
+        <div *ngFor="let note of notes" id="note">
             
-               <p id="title">{{data.title}}</p> <br>
-                <p id="desc"> {{data.description}}</p><br>
-                <p id="created">created: {{data.created}}</p>
+               <p id="title">{{note.title}}</p> <br>
+                <p id="desc"> {{note.description}}</p><br>
+                <p id="created">created: {{note.created_at}}</p>
         </div>
+    
     </div>
 
 </div>
 </section>
+

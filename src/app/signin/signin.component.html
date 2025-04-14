@@ -2,10 +2,17 @@
 <section>
     <div id="main">
         <form [formGroup]="loginForm" (ngSubmit)="log()">
+            
             <label for="username">Username</label><br>
             <input type="text" required formControlName="username"><br>
+            <div *ngIf="hasError('password', 'required')">
+                <p style="color: red">Password is required</p>
+            </div>
             <label for="password">Password</label><br>
             <input type="password" required formControlName="password"><br>
+            <div *ngIf="hasError('password', 'required')">
+                <p style="color: red">Password is required</p>
+            </div>
         <br>
         <div>
             <button type="button" id="btn1" (click)="allNote()">LogIn</button>
