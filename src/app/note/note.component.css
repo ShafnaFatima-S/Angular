@@ -13,16 +13,16 @@
     width: 70px;
     height: 40px;
     border-radius: 20px;
-    border: 1px solid yellow;
+    border: 1px solid rgb(0, 0, 0);
 }
 #main_div{
     width: 800px;
     height: 500px;
-    background-color: #F2FB7F;
-    margin-left: 280px;
-    margin-top: 10px;
+    background-color: #eff599;
+    margin-left: 330px;
+    margin-top: 20px;
     border-radius: 20px;
-    border: 1px solid #F2FB7F;
+    border: 1px solid #eff599;
 }
 input{
 
@@ -37,8 +37,8 @@ input{
     padding-left: 10px;
 }
 textarea{
+    
     margin-top: 10px;
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     /* gap: 10px; */
@@ -58,7 +58,7 @@ textarea{
     border: 1px solid white;
     
 }
-#cat{
+#categories{
     margin-top: 10px;
     height: 40px;
     width: 600px;
