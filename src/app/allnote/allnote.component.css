@@ -63,12 +63,7 @@ nav{
     right: 15px;
 }
  
-#main{
-    margin-left: 10px;
-}
-#heading{
-    color: white;
-}
+
 #add_img{
     width: 60px;
     height: 60px;
@@ -121,4 +116,13 @@ nav{
     text-align: left;
     line-height: 1px;
     padding-left: 10px;
+}
+#hover{
+    position: absolute;
+    margin-left: 200px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+#note:hover #hover{
+    opacity: 1;
 }

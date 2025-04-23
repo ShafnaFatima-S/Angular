@@ -10,24 +10,27 @@
     <hr id="line">
     <div id="content">
     <div  id="sidebar">
-        <a href="#" id="side">All Notes</a><br>
-        <a href="#" id="side">Trash</a><br>
+        <a (click)="fetchNotes()" id="side">All Notes</a><br>
+        <a (click)="trash()" id="side">Trash</a><br>
         <a href="#" id="side">Lock</a><br>
         <a href="#" id="side">Archive</a><br>
        
     </div>
     <div id="vertical"></div>
-    <div id="main">
-        <h3 id="heading">All Notes</h3>
-    </div>
+    
     <div>
         <a (click)="note()" >
             <img src="assets/image/add.png" alt="add" id="add_img">
         </a>
     </div> 
     <div id="outer">
-        
-        <div *ngFor="let note of notes" id="note">
+       
+        <div *ngFor="let note of notes" id="note" >
+            <div id="hover">
+                <a><img src="assets/image/pin.png" alt="pin" (click)="pin(note.id)"></a>
+                <a><img src="assets/image/archive.png" alt="archive"></a>
+                <a><img src="assets/image/trash.png" alt="trash" ></a>
+            </div>
             
                <p id="title">{{note.title}}</p> <br>
                 <p id="desc"> {{note.description}}</p><br>

@@ -55,12 +55,16 @@ async allNote(){
         alert("Invalid username and password!")
         
       }
-      token.push(data.token); 
+      else{
+        token.push(data.token);
+        console.log("token in array",token) 
         // this.token.push(data.token)
         console.log("token------>",data.token)
         console.log("token------>>>",token)
 
         this.router.navigate(['/allnote'])
+      }
+      
       
 }
 
