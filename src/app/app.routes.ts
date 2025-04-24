@@ -8,6 +8,7 @@ import { SigninComponent } from './signin/signin.component';
 import { AllnoteComponent } from './allnote/allnote.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { NoteComponent } from './note/note.component';
+import { LockComponent } from './lock/lock.component';
 
 export const routes: Routes = [
     
@@ -18,7 +19,8 @@ export const routes: Routes = [
             {path:'allnote',component:AllnoteComponent},
             {path:'forgot',component:ForgotComponent},
             {path:'note',component:NoteComponent},
-            {path:'note/:id',component:NoteComponent}
+            {path:'note/:id',component:NoteComponent},
+            {path:'lock',component:LockComponent}
         ];
     
 @NgModule({

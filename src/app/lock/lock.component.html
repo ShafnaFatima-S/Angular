@@ -1,0 +1,10 @@
+<div id="main">
+    <form [formGroup]="lockForm" (ngSubmit)="log()">
+        <label id="pass">Password</label><br>
+        <input type="password" required id="password" formControlName="password">
+        <div *ngIf="hasError('password', 'required')">
+            <p style="color: red">password is required</p>
+        </div>
+        <button type="button" (click)="lock()">Create</button>
+    </form>
+</div>
