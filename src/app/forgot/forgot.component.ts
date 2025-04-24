@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Component} from '@angular/core';
 import { FormGroup, FormControl, Validators ,FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Router } from '@angular/router';
+import axios from 'axios';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class ForgotComponent {
       ],
     ],
     confirmPassword:['',Validators.required],
-    // createPassword:[''],
+    username:['',Validators.required],
     },
   {validator:this.passwordMatchValidator}
 );
@@ -65,14 +66,23 @@ password1() {
   }
 
 
-onSubmit() {
-  if (this.passwordForm.valid) {
-      alert(`Form Submitted Successfully`);
-  } else {
-      alert('Please check the form for errors');
-  }
-}
 
+async forgot(){
+  if (this.passwordForm.valid) {
+    alert(`Form Submitted Successfully`);
+    const username=this.passwordForm.get('username')?.value;
+  const password=this.passwordForm.get('createPassword')?.value;
+  
+  const url=`http://localhost:3000/forgot?username=username&password=password`
+  const response=await axios.put(url)
+  console.log("forgot response---------->",response.data)
+  this.router.navigate(['/signin']);
+  
+} else {
+    alert('Please check the form for errors');
+}
+  
+}
 
 hasError(controlName: string, errorName: string) {
   return (
