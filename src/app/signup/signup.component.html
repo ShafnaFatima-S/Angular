@@ -1,13 +1,14 @@
 
 <section>
     <div id="main">
-        <form action="">
+        <form [formGroup]="SignUpForm" >
             <label for="username">Username</label><br>
-            <input type="text" required><br>
+            <input type="text" required formControlName="username"><br>
             <label for="password">Password</label><br>
-            <input type="password" required><br>
+            <input type="password" required formControlName="password"><br>
+            <button (click)="signIn()">Create</button>
         </form><br>
-        <button (click)="signIn()">Create</button>
+       
     </div>
 
 </section>

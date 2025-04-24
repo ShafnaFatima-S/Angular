@@ -60,26 +60,60 @@ async pin(id:string){
   const response=await axios.get(url,{headers:{
     Authorization: `Bearer ${token[0]}`
   }})
+  console.log("pin id:",id)
   console.log("pinned response=======>",response.data)
-  // this.notes=response.data
  this.fetchNotes()
 
   
 }
 
-async click(id:string){
-//   console.log("token=====>",token)
-//   const url =`http://localhost:8080/getAll`
-//    console.log("click url============>",{url})
-//    let response= await axios.get(url,{headers: {
-//     Authorization: `Bearer ${token[0]}`
-// }})
-// console.log(response.data)
-// this.notes=Object.values(response.data.data)
-// const id=response.data.data[0].id
-console.log("id:",id)
+async archive(id:string){
+  console.log("archive token=====>",token)
+  const url =`http://localhost:8080/archive?id=${id}`
+    console.log("archive url============>",{url})
+    let response= await axios.get(url,{headers: {
+     Authorization: `Bearer ${token[0]}`
+ }})
+ console.log("archived id:",id)
+ console.log("archived response--------->",response.data)
+ this.fetchNotes()
 // console.log("click notes======>",this.notes)
+}
 
+async delete(id:string){
+  console.log("delete token==========>",token)
+  const url=`http://localhost:8080/delete/?id=${id}`
+  console.log("delete url============>",url)
+  let response= await axios.delete(url,{headers:{
+    Authorization: `Bearer ${token[0]}`
+  }})
+  console.log("deleted id--------->",id)
+  console.log("deleted response------>",response.data)
+  this.fetchNotes()
+}
+
+async archivedNotes(){
+  console.log("archived token===>",token)
+  const url=`http://localhost:8080/getArchive`
+  console.log("trash url=======>",url)
+  const response=await axios.get(url,{headers:{
+    Authorization: `Bearer ${token[0]}`
+  }} )
+   this.notes=Object.values(response.data.data)
+  console.log("trash response=======>",response.data.data)
+  
+}
+
+async edit(id:string){
+  console.log("note token----->",token)
+  const url=`http://localhost:8080/get/?id=${id}`
+  console.log("single url======>",url)
+  const response=await axios.get(url,{headers:{
+    Authorization: `Bearer ${token[0]}`
+  }})
+  console.log("note id:",id)
+  console.log("note response=======>",response.data)
+  this.router.navigate(['/note',id]);
 }
 // input:any=[{title:'work',description:'complete it',created:'07/04/2025'},
 //   {title:'work',description:'complete all szdxfcvh cfvbhjn dcfvbn cfvgbh fvgbh',created:'07/04/2025'},

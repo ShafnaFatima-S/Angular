@@ -17,7 +17,8 @@ export const routes: Routes = [
             {path:'signin',component:SigninComponent},
             {path:'allnote',component:AllnoteComponent},
             {path:'forgot',component:ForgotComponent},
-            {path:'note',component:NoteComponent}
+            {path:'note',component:NoteComponent},
+            {path:'note/:id',component:NoteComponent}
         ];
     
 @NgModule({

@@ -13,7 +13,7 @@
         <a (click)="fetchNotes()" id="side">All Notes</a><br>
         <a (click)="trash()" id="side">Trash</a><br>
         <a href="#" id="side">Lock</a><br>
-        <a href="#" id="side">Archive</a><br>
+        <a (click)="archivedNotes()" id="side">Archive</a><br>
        
     </div>
     <div id="vertical"></div>
@@ -25,16 +25,16 @@
     </div> 
     <div id="outer">
        
-        <div *ngFor="let note of notes" id="note" >
+        <div *ngFor="let note of notes" id="note" (click)="edit(note.id)" >
             <div id="hover">
                 <a><img src="assets/image/pin.png" alt="pin" (click)="pin(note.id)"></a>
-                <a><img src="assets/image/archive.png" alt="archive"></a>
-                <a><img src="assets/image/trash.png" alt="trash" ></a>
+                <a><img src="assets/image/archive.png" alt="archive" (click)="archive(note.id)"></a>
+                <a><img src="assets/image/trash.png" alt="trash" (click)="delete(note.id)"></a>
             </div>
             
                <p id="title">{{note.title}}</p> <br>
                 <p id="desc"> {{note.description}}</p><br>
-                <p id="created">created: {{note.created_at}}</p>
+                <p id="created"><img src="assets/image/calendar.png" alt="calendar" > {{note.created_at}}</p>
         </div>
     
     </div>

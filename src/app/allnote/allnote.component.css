@@ -112,11 +112,14 @@ nav{
     
 }
 #created{
+    display: flex;
+    align-items: center;
     font-size: 15px;
     text-align: left;
     line-height: 1px;
     padding-left: 10px;
 }
+
 #hover{
     position: absolute;
     margin-left: 200px;

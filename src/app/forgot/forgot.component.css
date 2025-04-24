@@ -1,5 +1,5 @@
 #main{
-    height: 350px;
+    height: 400px;
     width: 400px;
     border-radius: 20px;
     background-color: yellow;
@@ -10,6 +10,11 @@
     padding-left: 100px;
     align-content: center;
 }
+#userLabel{
+   
+    font-size: 30px;
+    padding-left: 90px;
+}
 #label1{
     font-size: 30px;
     padding-left: 90px;
@@ -18,6 +23,7 @@
     font-size: 30px;
     padding-left: 40px;
 }
+
 input{
     position: relative;
     height: 40px;
@@ -28,11 +34,12 @@ input{
     text-align: center;
 }
 #btn1{
+    
     width: 100px;
     height: 40px;
     font-size: 20px;
     margin-left: 90px;
-    margin-top: 30px;
+    margin-top: 5px;
     color: yellow;
     background-color: black;
     border: 1px solid black;
@@ -42,7 +49,7 @@ input{
     position: absolute;
     
     width: 20px;
-    top: 90px;
+    top: 140px;
     margin-left: 250px; 
     margin-top:141px;
 }
@@ -50,7 +57,7 @@ input{
     position: absolute;
     
     width: 20px;
-    top: 90px;
+    top: 140px;
     margin-left: 250px; 
     margin-top:240px;
 }
