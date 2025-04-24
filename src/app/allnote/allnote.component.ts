@@ -115,6 +115,14 @@ async edit(id:string){
   console.log("note response=======>",response.data)
   this.router.navigate(['/note',id]);
 }
+
+async lock(){
+  this.router.navigate(['/lock']);
+
+  
+}
+
+
 // input:any=[{title:'work',description:'complete it',created:'07/04/2025'},
 //   {title:'work',description:'complete all szdxfcvh cfvbhjn dcfvbn cfvgbh fvgbh',created:'07/04/2025'},
 //   {title:'asdfgh',description:'complete_all',created:'07/04/2025'},

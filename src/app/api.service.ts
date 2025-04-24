@@ -13,8 +13,5 @@ export class ApiService {
     
     console.log("response----------->",response)
   }
-  // getNoteById(id: string):Promise<Observable<any>> {
-  //  return  axios.get(`http://localhost:8080/get/?id=id`)
-   
-  // }
+  
 }
